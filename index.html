@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbf9f5">
+  <meta name="description" content="WAKEI 和敬 — hành trình khám phá văn hoá Nhật Bản qua check-in, minigame và phần quà lưu niệm.">
+  <title>WAKEI 和敬</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23006434'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E和%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#view">Bỏ qua điều hướng</a>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="#/" aria-label="WAKEI — về trang chủ">WAKEI <span class="jp">和敬</span></a>
+      <nav class="topnav" id="topnav" aria-label="Điều hướng chính"></nav>
+      <div class="top-actions">
+        <a class="chip-progress" id="chip-progress" href="#/rewards" aria-label="Tiến độ huy hiệu"></a>
+        <div class="seg" id="lang" role="group" aria-label="Ngôn ngữ">
+          <button type="button" data-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" data-lang="ja" aria-pressed="false">JA</button>
+        </div>
+        <button class="icon-btn" id="btn-profile" type="button" aria-label="Hồ sơ & cài đặt"><span class="ms" aria-hidden="true">person</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1"><div class="container"><p class="empty">Đang tải…</p></div></main>
+
+  <footer class="footer">
+    <div class="container">
+      <div><strong>WAKEI 和敬</strong><br><small id="footer-note"></small></div>
+      <nav id="footer-links" aria-label="Liên kết chân trang"></nav>
+    </div>
+  </footer>
+
+  <nav class="bottomnav" aria-label="Điều hướng chính (di động)"><ul id="bottomnav-list"></ul></nav>
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <noscript><p style="padding:24px">Trang web cần JavaScript để hoạt động.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
